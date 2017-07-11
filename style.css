@@ -16,7 +16,7 @@ body {
     opacity: 0;
     animation: fadein 0.75s;
     animation-timing-function: ease-out;
-    animation-delay: 1.1s;
+    animation-delay: 1.25s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -40,7 +40,7 @@ body {
     background: rgb(37, 44, 95);
     animation: loader 0.35s;
     animation-timing-function: ease;
-    animation-delay: 0.5s;
+    animation-delay: 0.65s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
 }
@@ -61,25 +61,61 @@ body {
     left: 72px;
 }
 
-#menu a {
-    color: #b0b2c3;
-    display: block;
+#menu .item {
+    position: relative;
+    width: 500px;
+}
+
+#menu .item a {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 56px;
     font-weight: bold;
     line-height: 72px;
     text-decoration: none;
+}
+
+#menu .item > a {
+    color: #ffffff;
     transition: color 0.25s ease;
 }
 
-#menu a:hover {
+#menu .item:hover > a {
+    color: #333;
+}
+
+#menu .item .sub {
+    left: 64px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: left 0.25s ease, opacity 0.25s ease;
+}
+
+#menu .item:hover .sub {
+    left: 80px;
+    opacity: 1;
+}
+
+#menu .item .sub * {
     color: #fff;
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 8px;
+    line-height: 72px;
+}
+
+#menu .item .sub a {
+    transition: color 0.1s ease;
+}
+
+#menu .item .sub a:hover {
+    color: rgb(49, 81, 217);
 }
 
 #logo {
     position: absolute;
     top: 72px;
     right: 72px;
-    width: 128px;
-    height: 128px;
+    width: 112px;
+    height: 112px;
 }
