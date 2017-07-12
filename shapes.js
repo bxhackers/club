@@ -4,14 +4,14 @@ var xlinkns = "http://www.w3.org/1999/xlink";
 var colors = ["turquoise", "green", "blue", "purple", "yellow", "orange", "red"];
 var shapes = ["triangle", "semicircle", "spring", "line"];
 
-var pixels_per_shape = 128;
+var pixels_per_shape = 152;
 var n_shapes = Math.floor((window.innerWidth * window.innerHeight) / Math.pow(pixels_per_shape, 2));
 
 for (var i = 0; i < n_shapes; i++) {
     var svg = document.createElementNS(svgns, "svg");
     svg.style.height = "28px";
     svg.style.left = Math.random() * 100 + "%";
-    svg.style.opacity = 0.5;
+    svg.style.opacity = 0.25;
     svg.style.position = "absolute";
     svg.style.top = Math.random() * 100 + "%";
     svg.style.transform = "rotate(" + Math.random() * 360 + "deg)";
