@@ -22,7 +22,7 @@ body {
 #sub-navigation {
     height: 48px;
     width: 100%;
-    background: blue;
+    background: #007161;
     text-align: center;
 }
 
@@ -34,6 +34,15 @@ body {
     line-height: 48px;
     margin: 0 16px;
     text-decoration: none;
+    transition: 0.1s ease color;
+}
+
+#main-navigation a:hover {
+    color: #007161;
+}
+
+#sub-navigation a:hover {
+    color: #0e3e22;
 }
 
 #main-navigation span, #sub-navigation span {
@@ -43,9 +52,9 @@ body {
 }
 
 #main-navigation .selected {
-    color: lightblue;
+    color: #007161;
 }
 
 #sub-navigation .selected {
-    color: lightblue;
+    color: #0e3e22;
 }

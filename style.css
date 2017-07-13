@@ -39,7 +39,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgb(37, 44, 95);
+    background: #007161;
     animation: loader 0.35s ease;
     animation-delay: 0.65s;
     animation-fill-mode: forwards;
@@ -146,7 +146,7 @@ body {
 }
 
 #menu .item .sub a:hover {
-    color: rgb(49, 81, 217);
+    color: #007161;
 }
 
 #logo {
