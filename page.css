@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #fff;
+}
+
+#main-navigation {
+    height: 48px;
+    width: 100%;
+    background: #333;
+    text-align: center;
+}
+
+#sub-navigation {
+    height: 48px;
+    width: 100%;
+    background: blue;
+    text-align: center;
+}
+
+#main-navigation a, #sub-navigation a {
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 48px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+#main-navigation span, #sub-navigation span {
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+#main-navigation .selected {
+    color: lightblue;
+}
+
+#sub-navigation .selected {
+    color: lightblue;
+}
