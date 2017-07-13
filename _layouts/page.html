@@ -7,7 +7,7 @@
 <body>
     <div id="main-navigation">
         <div class="container">
-            <a href="{{ "index.html" | absolute_url }}">Home</a>
+            <a href="{{ "/" | absolute_url }}">Home</a>
             <span>//</span>
             <a href="#"{% if page.maintab == "about" %}class="selected"{% endif %}>About</a>
             <span>//</span>
@@ -18,7 +18,7 @@
     </div>
     <div id="sub-navigation">
         {% if page.maintab == "about" %}
-        <a href="#"{% if page.subtab == "team" %}class="selected"{% endif %}>Team</a>
+        <a href="{{ "/about/team" | absolute_url }}"{% if page.subtab == "team" %}class="selected"{% endif %}>Team</a>
         <span>//</span>
         <a href="#"{% if page.subtab == "contact" %}class="selected"{% endif %}>Contact</a>
         {% elsif page.maintab == "resources" %}
