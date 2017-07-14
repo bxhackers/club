@@ -12,6 +12,7 @@ function setupLinkHandling() {
                     window.history.pushState({"html": this.responseText}, "", href);
                     document.getElementsByTagName("html")[0].innerHTML = this.responseText;
                     setupLinkHandling();
+                    setupNavigation();
                     generateShapes();
                 }
             };
