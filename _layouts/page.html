@@ -1,3 +1,22 @@
+---
+navigation:
+    - name: Home
+    - name: About
+      pages:
+          - name: Team
+            path: /about/team
+          - name: Contact
+            path: /about/contact
+    - name: Resources
+    - name: Events
+      pages:
+          - name: AtomHacks
+            path: /events/atomhacks
+          - name: Hackathons
+            path: /events/hackathons
+          - name: Trips
+            path: /events/trips
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,28 +26,28 @@
 <body>
     <div id="main-navigation">
         <div class="container">
-            <a href="{{ "/" | absolute_url }}">Home</a>
+            {% for item in layout.navigation %}
+            {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
+            <a href="#"{% if page.maintab == main_tab %}class="selected"{% endif %}>{{ item.name }}</a>
+            {% if forloop.index < forloop.length %}
             <span>//</span>
-            <a href="#"{% if page.maintab == "about" %}class="selected"{% endif %}>About</a>
-            <span>//</span>
-            <a href="#"{% if page.maintab == "resources" %}class="selected"{% endif %}>Resources</a>
-            <span>//</span>
-            <a href="#"{% if page.maintab == "events" %}class="selected"{% endif %}>Events</a>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     <div id="sub-navigation">
-        {% if page.maintab == "about" %}
-        <a href="{{ "/about/team" | absolute_url }}"{% if page.subtab == "team" %}class="selected"{% endif %}>Team</a>
+        {% for item in layout.navigation %}
+        {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
+        {% if page.maintab == main_tab %}
+        {% for sub_item in item.pages %}
+        {% capture sub_tab %}{{ sub_item.name | downcase }}{% endcapture %}
+        <a href="{{ sub_item.path | absolute_url }}"{% if page.subtab == sub_tab %}class="selected"{% endif %}>{{ sub_item.name }}</a>
+        {% if forloop.index < forloop.length %}
         <span>//</span>
-        <a href="#"{% if page.subtab == "contact" %}class="selected"{% endif %}>Contact</a>
-        {% elsif page.maintab == "resources" %}
-        <a href="#"{% if page.subtab == "web_design" %}class="selected"{% endif %}>Web Design</a>
-        <a href="#"{% if page.subtab == "mobile_apps" %}class="selected"{% endif %}>Mobile Apps</a>
-        {% elsif page.maintab == "events" %}
-        <a href="#"{% if page.subtab == "atomhacks" %}class="selected"{% endif %}>AtomHacks</a>
-        <a href="#"{% if page.subtab == "hackathons" %}class="selected"{% endif %}>Hackathons</a>
-        <a href="#"{% if page.subtab == "trips" %}class="selected"{% endif %}>Trips</a>
         {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
     </div>
     {{ content }}
     <script src="{{ "js/links.js" | absolute_url }}" type="text/javascript"></script>
