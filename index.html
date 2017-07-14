@@ -14,27 +14,25 @@
             {% include shapes.html %}
         </div>
         <div id="menu">
+            {% for item in site.data.navigation %}
+            {% if item.name != "Home" %}
             <div class="item">
-                <a href="#">About</a>
+                <a href="{{ item.path | absolute_url }}">{{ item.name }}</a>
+                {% capture num_pages %}{{ item.pages | size }}{% endcapture %}
+                {% assign num_pages = num_pages | plus: 0 %} <!-- convert to integer -->
+                {% if num_pages > 0 %}
                 <div class="sub">
-                    <a href="{{ "about/team" | absolute_url }}">Team</a>
+                {% for sub_item in item.pages %}
+                    <a href="{{ sub_item.path | absolute_url }}">{{ sub_item.name }}</a>
+                    {% if forloop.index < forloop.length %}
                     <span>//</span>
-                    <a href="#">Contact</a>
+                    {% endif %}
+                {% endfor %}
                 </div>
+                {% endif %}
             </div>
-            <div class="item">
-                <a href="#">Resources</a>
-            </div>
-            <div class="item">
-                <a href="#">Events</a>
-                <div class="sub">
-                    <a href="#">AtomHacks</a>
-                    <span>//</span>
-                    <a href="#">Hackathons</a>
-                    <span>//</span>
-                    <a href="#">Trips</a>
-                </div>
-            </div>
+            {% endif %}
+            {% endfor %}
         </div>
         <img id="logo" src="{{ "img/bxscience.svg" | absolute_url }}" />
     </div>

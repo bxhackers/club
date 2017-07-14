@@ -1,6 +1,7 @@
 [
     {
-        "name": "Home"
+        "name": "Home",
+        "path": "/"
     },
     {
         "name": "About",

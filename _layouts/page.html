@@ -9,7 +9,7 @@
         <div class="container">
             {% for item in site.data.navigation %}
             {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
-            <a href="#"{% if page.maintab == main_tab %}class="selected"{% endif %}>{{ item.name }}</a>
+            <a href="{{ item.path | absolute_url }}"{% if page.maintab == main_tab %}class="selected"{% endif %}>{{ item.name }}</a>
             {% if forloop.index < forloop.length %}
             <span>//</span>
             {% endif %}
