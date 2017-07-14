@@ -1,22 +1,3 @@
----
-navigation:
-    - name: Home
-    - name: About
-      pages:
-          - name: Team
-            path: /about/team
-          - name: Contact
-            path: /about/contact
-    - name: Resources
-    - name: Events
-      pages:
-          - name: AtomHacks
-            path: /events/atomhacks
-          - name: Hackathons
-            path: /events/hackathons
-          - name: Trips
-            path: /events/trips
----
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +7,7 @@ navigation:
 <body>
     <div id="main-navigation">
         <div class="container">
-            {% for item in layout.navigation %}
+            {% for item in site.data.navigation %}
             {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
             <a href="#"{% if page.maintab == main_tab %}class="selected"{% endif %}>{{ item.name }}</a>
             {% if forloop.index < forloop.length %}
@@ -36,7 +17,7 @@ navigation:
         </div>
     </div>
     <div id="sub-navigation">
-        {% for item in layout.navigation %}
+        {% for item in site.data.navigation %}
         {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
         {% if page.maintab == main_tab %}
         {% for sub_item in item.pages %}
