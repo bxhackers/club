@@ -19,14 +19,18 @@ body {
     text-align: center;
 }
 
-#sub-navigation {
+.sub-navigation {
     height: 48px;
     width: 100%;
     background: #007161;
     text-align: center;
 }
 
-#main-navigation a, #sub-navigation a {
+.sub-navigation.hidden {
+    display: none;
+}
+
+#main-navigation a, .sub-navigation a {
     color: #fff;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -41,11 +45,11 @@ body {
     color: #007161;
 }
 
-#sub-navigation a:hover {
+.sub-navigation a:hover {
     color: #0e3e22;
 }
 
-#main-navigation span, #sub-navigation span {
+#main-navigation span, .sub-navigation span {
     color: #fff;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -55,6 +59,6 @@ body {
     color: #007161;
 }
 
-#sub-navigation .selected {
+.sub-navigation .selected {
     color: #0e3e22;
 }

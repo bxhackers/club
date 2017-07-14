@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="{{ "css/page.css" | absolute_url }}" type="text/css" />
 </head>
 <body>
-    <div id="main-navigation">
-        <div class="container">
+    <div id="navigation">
+        <div id="main-navigation">
             {% for item in site.data.navigation %}
             {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
             <a href="{{ item.path | absolute_url }}"{% if page.maintab == main_tab %}class="selected"{% endif %}>{{ item.name }}</a>
@@ -15,22 +15,21 @@
             {% endif %}
             {% endfor %}
         </div>
-    </div>
-    <div id="sub-navigation">
         {% for item in site.data.navigation %}
         {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
-        {% if page.maintab == main_tab %}
-        {% for sub_item in item.pages %}
-        {% capture sub_tab %}{{ sub_item.name | downcase }}{% endcapture %}
-        <a href="{{ sub_item.path | absolute_url }}"{% if page.subtab == sub_tab %}class="selected"{% endif %}>{{ sub_item.name }}</a>
-        {% if forloop.index < forloop.length %}
-        <span>//</span>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
+        <div class="sub-navigation{% if page.maintab != main_tab %} hidden{% endif %}" parent="{{ item.name }}">
+            {% for sub_item in item.pages %}
+            {% capture sub_tab %}{{ sub_item.name | downcase }}{% endcapture %}
+            <a href="{{ sub_item.path | absolute_url }}"{% if page.subtab == sub_tab %}class="selected"{% endif %}>{{ sub_item.name }}</a>
+            {% if forloop.index < forloop.length %}
+            <span>//</span>
+            {% endif %}
+            {% endfor %}
+        </div>
         {% endfor %}
     </div>
     {{ content }}
     <script src="{{ "js/links.js" | absolute_url }}" type="text/javascript"></script>
+    <script src="{{ "js/navigation.js" | absolute_url }}" type="text/javascript"></script>
 </body>
 </html>
