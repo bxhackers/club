@@ -20,6 +20,23 @@
         "name": "Resources"
     },
     {
+        "name": "Paths",
+        "pages": [
+            {
+                "name": "Web Design",
+                "path": "/paths/web"
+            },
+            {
+                "name": "Mobile Development",
+                "path": "/paths/mobile"
+            },
+            {
+                "name": "Data Science",
+                "path": "/paths/data"
+            }
+        ]
+    },
+    {
         "name": "Events",
         "pages": [
             {

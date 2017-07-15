@@ -15,7 +15,7 @@ body {
 #main-navigation {
     height: 48px;
     width: 100%;
-    background: #333;
+    background: rgb(28, 29, 37);
     text-align: center;
 }
 
