@@ -85,6 +85,8 @@ body {
     margin-top: 72px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 236px;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 #container {
@@ -113,7 +115,7 @@ body {
     margin-bottom: 32px;
 }
 
-#content:last-child {
+#content > :last-child {
     margin-bottom: 4px;
 }
 
@@ -141,4 +143,24 @@ body {
 
 #content li:last-of-type {
     margin-bottom: 20px;
+}
+
+#footer {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 42px;
+}
+
+#footer p {
+    text-align: center;
+}
+
+#footer a {
+    color: #999;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+#footer a:hover {
+    color: #666;
 }
