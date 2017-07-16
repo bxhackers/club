@@ -99,8 +99,7 @@ body {
 }
 
 #menu .item {
-    position: relative;
-    width: 500px;
+    position: inline-block;
 }
 
 #menu .item a {
@@ -121,15 +120,15 @@ body {
 }
 
 #menu .item .sub {
-    left: 64px;
+    margin-top: -72px;
+    margin-left: 64px;
     opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: left 0.25s ease, opacity 0.25s ease;
+    position: inline-block;
+    transition: margin-left 0.25s ease, opacity 0.25s ease;
 }
 
 #menu .item:hover .sub {
-    left: 80px;
+    margin-left: 80px;
     opacity: 1;
 }
 
