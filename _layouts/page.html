@@ -19,8 +19,7 @@
         {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
         <div class="sub-navigation{% if page.maintab != main_tab %} hidden{% endif %}" parent="{{ item.name }}">
             {% for sub_item in item.pages %}
-            {% capture sub_tab %}{{ sub_item.name | downcase }}{% endcapture %}
-            <a href="{{ sub_item.path | absolute_url }}"{% if page.subtab == sub_tab %}class="selected"{% endif %}>{{ sub_item.name }}</a>
+            <a href="{{ sub_item.path | absolute_url }}"{% if page.title == sub_item.name %}class="selected"{% endif %}>{{ sub_item.name }}</a>
             {% if forloop.index < forloop.length %}
             <span>//</span>
             {% endif %}
