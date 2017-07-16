@@ -17,7 +17,21 @@
         ]
     },
     {
-        "name": "Resources"
+        "name": "Resources",
+        "pages": [
+            {
+                "name": "Free Stuff",
+                "path": "/resources/freestuff"
+            },
+            {
+                "name": "GitHub",
+                "path": "/resources/github"
+            },
+            {
+                "name": "Jupyter",
+                "path": "/resources/jupyter"
+            }
+        ]
     },
     {
         "name": "Paths",
@@ -28,7 +42,7 @@
             },
             {
                 "name": "Mobile Development",
-                "path": "/paths/mobile"
+                "path": "/paths/mobiledevelopment"
             },
             {
                 "name": "Data Science",
