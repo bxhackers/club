@@ -145,6 +145,17 @@ body {
     margin-bottom: 20px;
 }
 
+#content img {
+    max-width: 100%;
+    margin-bottom: 32px;
+}
+
+#content figcaption {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
 #footer {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 42px;
