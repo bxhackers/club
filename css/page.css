@@ -150,10 +150,10 @@ body {
     margin-bottom: 32px;
 }
 
-#content figcaption {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    margin-top: 8px;
+#content code {
+    display: block;
+    white-space: pre-wrap;
+    margin-bottom: 24px;
 }
 
 #footer {
