@@ -4,7 +4,7 @@ function setupLinkHandling() {
     var anchors = document.getElementsByTagName("a");
 
     for (var i = 0; i < anchors.length; i++) {
-        if (anchors[i].href.startsWith("http://localhost") || anchors[i].href.startsWith("https://atomhacks.github.io")) {
+        if (["localhost", "atomhacks.github.io", "bxhackers.club"].includes(window.location.hostname)) {
             anchors[i].onclick = function() {
                 var href = this.href;
                 var xhttp = new XMLHttpRequest();
