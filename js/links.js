@@ -4,8 +4,8 @@ function setupLinkHandling() {
     var anchors = document.getElementsByTagName("a");
 
     for (var i = 0; i < anchors.length; i++) {
-        if (["localhost", "atomhacks.github.io", "bxhackers.club"].includes(window.location.hostname)) {
-            anchors[i].onclick = function() {
+        anchors[i].onclick = function() {
+            if (["localhost", "atomhacks.github.io", "bxhackers.club"].includes(this.hostname)) {
                 var href = this.href;
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
@@ -21,8 +21,10 @@ function setupLinkHandling() {
                 xhttp.send();
 
                 return false;
-            };
-        }
+            } else {
+                return true;
+            }
+        };
     }
 
     window.onpopstate = function(e) {
