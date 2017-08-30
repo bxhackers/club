@@ -1,4 +1,8 @@
 function setupNavigation() {
+    if (document.getElementById("navigation") == null) {
+        return;
+    }
+    
     var anchors = document.getElementsByTagName("a");
     var sub_navigation_bars = document.getElementsByClassName("sub-navigation");
 
