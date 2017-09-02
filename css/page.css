@@ -167,6 +167,41 @@ body {
     color: #fff;
 }
 
+#contact input, #contact textarea, #contact button {
+    background: none;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+#contact input, #contact textarea {
+    line-height: 24px;
+    width: calc(100% / 2);
+    border: 2px #999 solid;
+    padding: 12px;
+    margin: 0 auto 24px;
+}
+
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border: 2px #333 solid;
+}
+
+#contact button {
+    font-weight: 500;
+    border: 2px #333 solid;
+    padding: 8px 16px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background: #333;
+    color: #fff;
+    font-weight: 600;
+}
+
 #footer {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 42px;
