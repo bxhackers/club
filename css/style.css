@@ -10,6 +10,7 @@ html, body {
 
 body {
     background: rgb(28, 29, 37);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: fixed;
 }
 
@@ -102,10 +103,9 @@ body {
 }
 
 #menu .item a {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 56px;
+    font-size: 64px;
     font-weight: bold;
-    line-height: 72px;
+    line-height: 82px;
     text-decoration: none;
 }
 
@@ -134,7 +134,7 @@ body {
 #menu .item .sub * {
     color: #fff;
     display: inline-block;
-    font-size: 24px;
+    font-size: 28px;
     margin-left: 8px;
     line-height: 72px;
 }
@@ -153,4 +153,60 @@ body {
     right: 72px;
     width: 112px;
     height: 112px;
+}
+
+#join {
+    position: absolute;
+    bottom: 72px;
+    left: 72px;
+}
+
+#join p {
+    color: #fff;
+    display: table;
+    font-size: 12px;
+    line-height: 16px;
+    width: 295px;
+    margin-bottom: 10px;
+}
+
+#join input, #join button {
+    display: inline-block;
+}
+
+#join input {
+    background: #007161;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    color: #fff;
+    line-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+    width: 226px;
+}
+
+#join input:focus {
+    outline: none;
+}
+
+#join button {
+    background: #fff;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    color: #007161;
+    cursor: pointer;
+    line-height: 36px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: -4px;
+    padding: 0 12px;
+    vertical-align: top;
+    transition: all 0.25s ease;
+    width: 69px;
+}
+
+#join button:hover {
+    background: #333;
+    color: #fff;
 }
