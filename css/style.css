@@ -91,7 +91,7 @@ body {
 }
 
 #menu .item .sub {
-    margin-top: -72px;
+    margin-top: -82px;
     margin-left: 64px;
     opacity: 0;
     position: inline-block;
@@ -108,7 +108,6 @@ body {
     display: inline-block;
     font-size: 28px;
     margin-left: 8px;
-    line-height: 82px;
 }
 
 #menu .item .sub a {
