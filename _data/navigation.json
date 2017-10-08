@@ -19,6 +19,7 @@
     },
     {
         "name": "Resources",
+        "path": "/resources",
         "pages": [
             {
                 "name": "Free Stuff",
@@ -36,6 +37,7 @@
     },
     {
         "name": "Paths",
+        "path": "/paths",
         "pages": [
             {
                 "name": "Web Design",
@@ -53,6 +55,7 @@
     },
     {
         "name": "Events",
+        "path": "/events",
         "pages": [
             {
                 "name": "AtomHacks",
