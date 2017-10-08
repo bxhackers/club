@@ -28,6 +28,17 @@
             {% endfor %}
         </div>
         {% endfor %}
+        <div id="mobile-navigation">
+            {% for item in site.data.navigation %}
+            {% capture main_tab %}{{ item.name | downcase }}{% endcapture %}
+            {% if main_tab == page.maintab %}
+            <a href="{{ item.path | absolute_url }}"{% if page.title == item.name %}class="selected"{% endif %}>{{ item.name }}</a>
+            {% for sub_item in item.pages %}
+            <a href="{{ sub_item.path | absolute_url }}"{% if page.title == sub_item.name %}class="selected"{% endif %}>{{ sub_item.name }}</a>
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
     <div id="background">
         <h1>{{ page.title }}</h1>

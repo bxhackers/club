@@ -240,3 +240,45 @@ form button:hover {
 #footer a:hover {
     color: #666;
 }
+
+@media only screen and (min-width: 961px) {
+    #mobile-navigation {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #main-navigation, .sub-navigation, #background {
+        display: none;
+    }
+
+    #navigation {
+        height: auto;
+        position: static;
+    }
+
+    #mobile-navigation {
+        background: rgb(0, 134, 117);
+        padding: 48px 0;
+    }
+
+    #mobile-navigation a {
+        color: #fff;
+        display: block;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 16px;
+        text-decoration: none;
+        transition: 0.1s ease color;
+    }
+
+    #mobile-navigation .selected {
+        color: #0e3e22;
+        font-size: 56px;
+    }
+
+    #container {
+        margin: 0;
+    }
+}

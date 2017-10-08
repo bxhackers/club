@@ -5,6 +5,7 @@
     },
     {
         "name": "About",
+        "path": "/about",
         "pages": [
             {
                 "name": "Team",
