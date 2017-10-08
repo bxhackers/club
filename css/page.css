@@ -242,7 +242,7 @@ form button:hover {
 }
 
 @media only screen and (min-width: 961px) {
-    #mobile-navigation {
+    #mobile-navigation, #mobile-navigation-exit {
         display: none;
     }
 }
@@ -276,6 +276,14 @@ form button:hover {
     #mobile-navigation .selected {
         color: #0e3e22;
         font-size: 56px;
+    }
+
+    #mobile-navigation-exit {
+        color: #fff;
+        position: absolute;
+        right: 28px;
+        text-decoration: none;
+        top: 28px;
     }
 
     #container {
