@@ -161,6 +161,10 @@ body {
     outline: none;
 }
 
+#join input::placeholder {
+    color: #e9e9e9;
+}
+
 #join button {
     background: #fff;
     border: none;
